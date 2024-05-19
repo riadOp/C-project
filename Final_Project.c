@@ -130,7 +130,7 @@ int addPatient(struct patient patients[], int patientCount) {
         printf("Enter your medical history: ");
         scanf(" %99[^\n]", patients[patientCount].medicalhistory);  // Use %99[^\n] to read entire line
 
-        patients[patientCount].id = patientCount + 200;
+        patients[patientCount].id = patientCount + 100;
         printf("Patient added successfully with ID %d\n", patients[patientCount].id);
 
         patientCount++;
