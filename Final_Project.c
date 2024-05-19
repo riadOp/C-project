@@ -7,7 +7,7 @@
 // Structure definitions
 struct patient {
     int id;
-    char name[50];
+    char name[100];
     int age;
     char gender;
     char address[50];
@@ -113,7 +113,7 @@ int addPatient(struct patient patients[], int patientCount) {
         printf("Database limit exceeded! Cannot add more patients.\n");
     } else {
         printf("Enter your name: ");
-        scanf("%49s", patients[patientCount].name);  // Use %49s to prevent buffer overflow
+        scanf(" %49[^\n]", patients[patientCount].name); 
 
         printf("Enter your age: ");
         scanf("%d", &patients[patientCount].age);
@@ -265,4 +265,3 @@ void showDoctors(struct doctor doctors[], int doctorCount) {
         printf("---------------------------------\n");
     }
 }
-
