@@ -1,1 +1,1 @@
-# C-project
+# Programming and Problem Solving Project
